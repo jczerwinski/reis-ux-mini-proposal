@@ -108,7 +108,9 @@ references:
   }
 ---
 
-# Background
+# Problem and Research Goal
+
+## Background
 
 Real estate trade is an important economic activity. As of August 2018, real estate trade comprised 12.9 per cent of Canadian gross domestic product, not including the contributions of construction, financing, and insurance.[^statscan-re] Purchasing a home is the largest transaction most people will undertake in their lives.
 
@@ -123,7 +125,7 @@ Prior research on real estate information systems has tended to focus on two pri
 
 This research tends to focus on system architecture, algorithms, and design. They are not particularly focused on usability, and lack rigorous usability testing and validation. Little attention is paid to determining the relative importance of specific real estate attributes or dimensions to end users.
 
-## Property valuation systems
+### Property valuation systems
 
 Property valuation systems research comprises a significant proporation of the real estate information system literature. Such systems have been demonstrated to be particularly effective in high-volume applications where valuation accuracy on individual properties is less important than average accuracy across large sets of properties -- mass appraisal use cases. For example, these systems are useful to municipal or regional authorities when assessing property values for taxation purposes,[^gis-valuations] or for the purpose of constructing property value maps[^wyatt-maps].
 
@@ -133,7 +135,7 @@ Because of the local nature of real estate markets and the market and property d
 
 None of these property valuation system studies makes any effort to formally assess the usability of the systems under study.
 
-## Searching, Querying, Filtering, and Reccomendation Systems
+### Searching, Querying, Filtering, and Reccomendation Systems
 
 Systems that assist with searching, querying, filtering, and recommending properties comprise another significant class of real estate information systems. 
 
@@ -150,6 +152,16 @@ The designs also tend to require access to the entire set of low-level data over
 These studies are also all relatively focused on the property querying and filtering process, or on consolidating the information provided to the end user into a one dimensional score, while providing little justification that these are features that users want.
 
 There may be opportunity for novel designs to provide significant value to real estate market participants. Instead of querying, filtering, and attribute consolodation systems -- systems which have already been studied -- users might prefer systems that provide expanded, faster, and easier access to raw attributes. There is also a significant opportunity to ensure that real estate information systems are designed in response to user priorities, and that the usability of such systems is rigorously validated.[^usability-dimensions]
+
+## Research Goal
+
+This research will investigate user experiences with real estate information systems. In particular, it will investigate the extent to which a purpose-built real estate information system prototype can improve user experiences with specific real estate information use cases.
+
+This research will investigate the following broad questions:
+
+ - Does the prototype improve the *effectiveness* of users on real estate information retrieval tasks?
+ - Does the prototype improve the *efficiency* of users on real estate information retrieval tasks?
+ - Does the prototype improve the *satisfaction* of users on real estate information retrieval tasks?
 
 # Methodology
 
@@ -206,5 +218,70 @@ These dimensions will each be analyzed in three ways -- by feature, aggregated a
 For each analysis, we assume that each observation used in the analysis is independent and identically distributed. We model these measures as Bernoulli distributed random variables. The proportion of each sample that favors the system is then the success probability parameter of a binomial distributed random variable. After each user is sampled, we will calculate the maximum likelihood estimate for the binomial distribution's success probability parameter. The Jeffreys interval will be used to estimate the confidence that this parameter is greater than 1/2 -- ie. that the system is an improvement on existing methods.[^jeffreys] Probability distributions for this parameter will also be reported.
 
 Sample sizes will not be pre-determined. New users will be recruited and sampled either until, in the opinion of the researcher, confidence that the system differs significantly from existing methods is sufficiently high relative to the cost of sampling new participants, or the cost of sampling a new participant exceeds the potential increase in confidence that the system differs significantly from existing methods.
+
+# Rationale for the research
+
+Although a significant amount of research on real estate information systems exists, a relatively small proportion of that research focuses on user experiences with such systems. Moreover, the research that does investigate user experiences with these systems is relatively poorly designed and is difficult to generalize.
+
+Further, real estate information systems are frequently used by a large population. Improving the user experience of these systems could significantly benefit this population.
+
+Research efforts to develop and test real estate information systems with improved user experiences offers to improve both the state of research, as well as the experiences of a large number of users.
+
+# Timelines
+
+| Deliverable | Start Date | End Date |
+|-------------|------------|----------|
+| Detailed proposal development | 2019-02 | 2019-08 |
+| Form supervisory committee | 2019-02 | 2019-02 |
+| Literature review | 2019-03 | 2019-07 |
+| Obtain ethics approval | 2019-06 | 2019-06 |
+| Develop pre-design and development user survey  | 2019-03 | 2019-03 |
+| Administer pre-design and development user survey | 2019-05 | 2019-05 |
+| Analyze pre-design and development user survey  | 2019-06 | 2019-06 |
+| Develop requirements for prototype system | 2019-08 | 2019-08 |
+| Design prototype system | 2019-07 | 2019-10 |
+| Develop prototype system  | 2019-10 | 2020-04 |
+| Design and develop usability experiments for prototype system | 2020-04 | 2020-06 |
+| Administer usability experiments for prototype system | 2020-07 | 2020-09 |
+| Analyse usability experiment results  | 2020-09 | 2020-10 |
+| Write thesis | 2020-10 | 2021-02 |
+| Oral defense | 2021-03 | 2020-03 |
+
+# Anticipated Results and Contributions
+
+This research will generate two primary artifacts:
+
+ 1. A thesis paper describing the research and its results
+ 2. The prototype real estate information system generated and investigated in the course of the research.
+
+A journal article and conference paper summarizing the research may also be developed.
+
+The thesis and prospective journal article and conference paper will contribute to both the real estate information system and user experience literature.
+
+The prototype real estate information system may be maintained and made available to the public, potentially enhancing their real estate information system user experiences.
+
+# Possible dissemination
+
+A journal article or conference paper summarizing this research would be a good candidate for inclusion in a user experience or usability focused journal or conference. Prospective journals and conferences include:
+
+ - The ACM CHI Conference on Human Factors in Computing Systems
+ - Human Factors: The Journal of the Human Factors and Ergonomics Society
+ - Journal of Usability Studies
+ - Behaviour and Information Technology
+ - International Journal of Human-Computer Studies
+ - International Journal of Human-Computer Interaction
+ - HCI International Conference
+ - Human-Computer Interaction
+ - Interacting with Computers
+
+# Hardware, Software, and Organizational Support Required
+
+The real estate brokerage Realty Executives: Devonshire Realty has agreed to provide logistical and financial support to this project. They have agreed to act as an industry partner for the purposes of a MITACS Accelerate grant application. They will provide access to real estate agents to act as survey and usability experiment participants.
+
+Because this research involves human subjects, research ethics approval from the Athabasca University Research Ethics Board is required.
+
+The work required to undertake this research will be conducted at either the graduate student's home office or at the Realty Executives: Devonshire Realty office. The graduate student's computer will be used to conduct the research, development, and analysis. Realty Executive: Devonshire Realty computers will be used to conduct usability tests with real estate agents.
+
+Amazon Web Services Educate will be used to host the prototype real estate information system developed in the course of this research. The subscription to this service is provided to all Athabasca University students.
 
 # References
