@@ -1,0 +1,9 @@
+{
+  "name": "",
+  "description": "",
+  "version": "0.0.0",
+  "dependencies": {
+    "schol-template-athabasca-university-mscis-thesis-mini-proposal": "0.0.0"
+  },
+  "devDependencies": {}
+}
